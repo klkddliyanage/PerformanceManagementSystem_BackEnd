@@ -57,7 +57,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<EmployeesService>();
 builder.Services.AddScoped<PerformanceGoalService>();
 
-// ✅ CORS config
+// CORS config
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
