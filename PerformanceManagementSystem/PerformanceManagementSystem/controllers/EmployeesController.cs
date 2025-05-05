@@ -10,7 +10,7 @@ namespace PerformanceManagementSystem.controllers
 
     [ApiController]
     [Route("api/[controller]")]
-    public class EmployeesController : Controller
+    public class EmployeesController : ControllerBase
     {
 
         private readonly EmployeesService _employeesService;

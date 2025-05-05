@@ -7,7 +7,7 @@ namespace PerformanceManagementSystem.PerformanceManagementSystem.controllers
 {
     [ApiController]
     [Route("api/[controller]/employees/{employeeId}")]
-    public class PerfromanceGoalController : Controller
+    public class PerfromanceGoalController : ControllerBase
     {
         private readonly PerformanceGoalService _performanceGoalService;
 
