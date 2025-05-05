@@ -12,34 +12,33 @@ namespace PerformanceManagementSystem.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Seeding Employees
             modelBuilder.Entity<Employee>().HasData(
-                new Employee { Id = 1, FullName = "Alice Johnson", Department = "HR" },
-                new Employee { Id = 2, FullName = "Bob Smith", Department = "IT" }
+                new Employee { Id = 25, FullName = "Alice Johnson", Department = "HR" },
+                new Employee { Id = 26, FullName = "Bob Smith", Department = "IT" }
             );
 
-            // Seeding Performance Goals
             modelBuilder.Entity<PerformanceGoal>().HasData(
                 new PerformanceGoal
                 {
-                    Id = 1,
-                    EmployeeId = 1,
+                    Id = 25,
+                    EmployeeId = 25,
                     GoalTitle = "Improve Onboarding",
                     Description = "Refine onboarding process for new hires.",
-                    DueDate = new DateTime(2025, 12, 31),
+                    DueDate = new DateTime(2025, 12, 31, 0, 0, 0, DateTimeKind.Utc),
                     Status = GoalStatus.NotStarted
                 },
                 new PerformanceGoal
                 {
-                    Id = 2,
-                    EmployeeId = 2,
+                    Id = 26,
+                    EmployeeId = 26,
                     GoalTitle = "Upgrade Infrastructure",
                     Description = "Replace old servers with cloud instances.",
-                    DueDate = new DateTime(2025, 10, 01),
+                    DueDate = new DateTime(2025, 10, 01, 0, 0, 0, DateTimeKind.Utc),
                     Status = GoalStatus.InProgress
                 }
             );
         }
+
     }
 
 }

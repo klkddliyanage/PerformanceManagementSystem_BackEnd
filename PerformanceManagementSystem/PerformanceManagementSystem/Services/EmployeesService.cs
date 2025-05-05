@@ -21,7 +21,7 @@ namespace PerformanceManagementSystem.Services
             //return await _context.Employees.Include(e => e.PerformanceGoals).ToListAsync();
             return await _context.Employees.IgnoreAutoIncludes().ToListAsync();
         }
-        public async Task<Employee> GetEmployee(int id)
+        public async Task<Employee?> GetEmployee(int id)
         {
             return await _context.Employees.IgnoreAutoIncludes().FirstOrDefaultAsync(e => e.Id == id);
         }
