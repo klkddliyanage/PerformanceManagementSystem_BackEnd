@@ -18,8 +18,7 @@ namespace PerformanceManagementSystem.Services
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
 
-            //return await _context.Employees.Include(e => e.PerformanceGoals).ToListAsync();
-            return await _context.Employees.IgnoreAutoIncludes().ToListAsync();
+            return await _context.Employees.IgnoreAutoIncludes().ToListAsync();  // To get all employees even when goal null
         }
         public async Task<Employee?> GetEmployee(int id)
         {
