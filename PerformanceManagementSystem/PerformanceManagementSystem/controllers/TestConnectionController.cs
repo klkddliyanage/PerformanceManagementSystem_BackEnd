@@ -22,11 +22,11 @@ namespace PerformanceManagementSystem.PerformanceManagementSystem.controllers
             try
             {
                 await _context.Database.CanConnectAsync();
-                return Ok("✅ Connected to database successfully!");
+                return Ok("Connected to database successfully!");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"❌ Failed to connect: {ex.Message}");
+                return StatusCode(500, $"Failed to connect: {ex.Message}");
             }
         }
     }
